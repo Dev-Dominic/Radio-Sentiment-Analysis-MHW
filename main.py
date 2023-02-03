@@ -1,7 +1,11 @@
+import os
 from flask import Flask, jsonify, request, g
 import sqlite3
 #from model.company import Company, CompanySchema
 #from model.news_item import NewsItem, NewsItemSchema
+
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -77,7 +81,8 @@ def get_one_company():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    PORT = int(os.getenv('PORT') or 0)
+    app.run(host='0.0.0.0', port=PORT)
     
 
 
