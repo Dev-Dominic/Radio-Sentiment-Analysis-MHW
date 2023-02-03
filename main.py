@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, g
 import sqlite3
-from model.company import Company, CompanySchema
-from model.news_item import NewsItem, NewsItemSchema
+#from model.company import Company, CompanySchema
+#from model.news_item import NewsItem, NewsItemSchema
 
 app = Flask(__name__)
 
