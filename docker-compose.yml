@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./src/web
+    command: python manage.py run -h 0.0.0.0
+    volumes:
+      - ./src/web/:/usr/src/app/
+    ports:
+      - 3033:3033
+    env_file:
+      - ./.env.dev
